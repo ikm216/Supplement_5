@@ -2,6 +2,15 @@ import math
 import pytest
 
 def square_root(num):
+    """
+    Calculates the square root of a number and raises ValueError if the number is negative.
+    
+    Args:
+        num: The number to calculate the square root for.
+    
+    Returns:
+        The square root of the number or the exception if the number is negative
+    """
     if num >= 0:
         return math.sqrt(num)
     else:
