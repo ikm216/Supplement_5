@@ -1,5 +1,12 @@
+import math
 import pytest
 
+def square_root(num):
+    if num >= 0:
+        return math.sqrt(num)
+    else:
+        raise  ValueError("A negative number cannot be calutaed to get square root")
+    
 def test_should_return_3_from_9():
     assert square_root(9) == 3
 
