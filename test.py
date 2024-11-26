@@ -18,7 +18,23 @@ def square_root(num):
     else:
         raise  ValueError("A negative number cannot be calutaed to get square root")
     
+def random_num():
+    rand = random.randint(1, 100)
 
+    if rand % 2 != 0:  
+        rand *= 2
+        if rand > 4:
+            raise ValueError("The random number is greater than 4")
+    if rand % 3 == 0:  
+        rand //= 3
+        if rand > 4:
+            raise ValueError("The random number is greater than 4")
+    if rand % 4 == 0:  
+        rand *= 4
+        if rand > 4:
+            raise ValueError("The random number is greater than 4")
+
+    return rand
 
     
 
