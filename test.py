@@ -64,4 +64,9 @@ def test_random_num_function_fully():
     with patch("random.randint", return_value=3):
         with pytest.raises(ValueError, match="greater than 4"):
             random_num()
+
+#Test for divisibles_check
+def test_should_return_divisibles_of_2():
+    assert divisibles_check(2) == [2,4,6,8,10]
+            
     
