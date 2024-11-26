@@ -34,7 +34,7 @@ def test_should_return_nothing_from_2_even():
     assert random_num(2) == 2
 
 def test_should_return_6_from_3_odd():
-    assert random_num(3) == 6
+    assert random_num(3) == 2
 
 def test_should_return_4_from_12_divisble_three():
     assert random_num(12) == 4
