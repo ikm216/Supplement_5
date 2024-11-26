@@ -49,7 +49,8 @@ def random_num():
 
     return rand
 
-    
+def divisibles_check(num):
+   return [i for i in range(1,11) if i % num == 0]
 
 #Test for square_root    
 def test_should_return_3_from_9():
