@@ -19,6 +19,19 @@ def square_root(num):
         raise  ValueError("A negative number cannot be calutaed to get square root")
     
 def random_num():
+    """
+    Generates a random number between 1 and 100, does a process, and raises an exception if > 4.
+    - If odd, multiply by 2.
+    - If divisible by 3, divide by 3.
+    - If divisible by 4, multiply by 4.
+    - Raise ValueError if > 4 at any step.
+
+    Args:
+        rand: Generated random number to be process.
+
+    Returns:
+        processed number or raises ValueError: If the processed number is greater than 4.
+    """
     rand = random.randint(1, 100)
 
     if rand % 2 != 0:  
