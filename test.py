@@ -50,7 +50,16 @@ def random_num():
     return rand
 
 def divisibles_check(num):
-   return [i for i in range(1,11) if i % num == 0]
+    """
+    Finds all numbers between 1 and 10 divisible by the number.
+
+    Args:
+        num: The number to check divisibility for.
+
+    Returns:
+        A list of numbers divisible by num.
+    """
+    return [i for i in range(1,11) if i % num == 0]
 
 #Test for square_root    
 def test_should_return_3_from_9():
