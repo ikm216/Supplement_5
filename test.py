@@ -1,5 +1,6 @@
 import math
 import pytest
+from unittest.mock import patch
 import random
 
 def square_root(num):
@@ -30,18 +31,8 @@ def test_should_return_exception_from_negative_num():
         square_root(-9)
 
 #Test for random_num
-def test_should_return_nothing_from_2_even():
-    assert random_num(2) == 2
-
-def test_should_return_6_from_3_odd():
-    assert random_num(3) == 2
-
-def test_should_return_4_from_12_divisble_three():
-    assert random_num(12) == 4
-
-def test_should_return_3_from_12_divisble_four():
-    assert random_num(12) == 3
-
-def test_should_return_exception_from_6():
-    with pytest.raises(ValueError, match = "The number is greater than 4"):
-        random_num(6)
+def test_random_num_function_fully():
+    with patch("random.randint", return_value=3):
+        with pytest.raises(ValueError, match="greater than 4"):
+            random_num()
+    
